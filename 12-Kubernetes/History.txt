@@ -1,0 +1,127 @@
+    1  export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
+    2  gsutil ls gs://$PROJECT_ID
+    3  gsutil -m cp -r gs://$PROJECT_ID/* ~/
+    4  chmod +x ~/guestbook-frontend/mvnw
+    5  chmod +x ~/guestbook-service/mvnw
+    6  gcloud services enable container.googleapis.com
+    7  gcloud container clusters create guestbook-cluster     --zone=us-central1-a     --num-nodes=2     --machine-type=n1-standard-2     --enable-autorepair     --enable-cloud-monitoring     --enable-cloud-logging
+    8  git status
+    9  git clone https://github.com/RoohinazK.git
+   10  git clone https://github.com/RoohinazK/SpringBoot-SpringCloud.git
+   11  git status
+   12  git init 
+   13  git add .
+   14  git commit -m "Files"
+   15  git config --global user.name RoohinazK
+   16  git commit -m "Files"
+   17  git push origin master
+   18  git push 
+   19  git status
+   20  git add/
+   21  git add
+   22  git add .
+   23  git push
+   24  git remote add SpringBoot-SpringCloud 'git@github.com:RoohinazK/SpringBoot-SpringCloud.git'
+   25  git push SpringBoot-SpringCloud
+   26  ls
+   27  cp guestbook-frontend SpringBoot-SpringCloud
+   28  cp -r guestbook-frontend SpringBoot-SpringCloud
+   29  cp -r guestbook-service SpringBoot-SpringCloud
+   30  cp -r kubernetes SpringBoot-SpringCloud
+   31  ls
+   32  cd SpringBoot-SpringCloud/
+   33  la
+   34  ls
+   35  git status
+   36  git add .
+   37  git push
+   38  git config --list
+   39  git add
+   40  git push
+   41  ls
+   42  git status
+   43  git commit 
+   44  git commit -m "Files"
+   45  git push
+   46  gcloud iam service-accounts create guestbook
+   47  export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
+   48  gcloud projects add-iam-policy-binding ${PROJECT_ID}   --member serviceAccount:guestbook@${PROJECT_ID}.iam.gserviceaccount.com   --role roles/editor
+   49  gcloud iam service-accounts keys create     ~/service-account.json     --iam-account guestbook@${PROJECT_ID}.iam.gserviceaccount.com
+   50  kubectl version
+   51  Client Version: version.Info{Major:"1", Minor:"10"...
+   52  Server Version: version.Info{Major:"1", Minor:"11+"...
+   53  kubectl create secret generic guestbook-service-account   --from-file=$HOME/service-account.json
+   54  kubectl describe secret guestbook-service-account
+   55  kubectl apply -f ~/kubernetes/
+   56  kubectl get svc guestbook-frontend
+   57  kubectl get svc
+   58  git status
+   59  git add .
+   60  git commit -m "Filess"
+   61  git push
+   62  ls
+   63  cd kubernetes/
+   64  ls
+   65  cat guestbook-frontend-deployment.yaml 
+   66  cd
+   67  ls
+   68  cd SpringBoot-SpringCloud/
+   69  git status
+   70  ls
+   71  mkdir 12-Kubernetes
+   72  ls
+   73  mv guestbook-frontend/* 12-Kubernetes/
+   74  ls
+   75  cd 12-Kubernetes/
+   76  ls
+   77  cd ..
+   78  ls
+   79  rm 12-Kubernetes/
+   80  rm -f 12-Kubernetes/
+   81  rm -r 12-Kubernetes/
+   82  ls
+   83  mkdir 12-Kubernetes
+   84  ls
+   85  cp guestbook-frontend 12-Kubernetes
+   86  cp -r guestbook-frontend 12-Kubernetes
+   87  ls
+   88  cd 12-Kubernetes/
+   89  ls
+   90  cd ..
+   91  cp -r guestbook-service/ 12-Kubernetes
+   92  cp -r kubernetes  12-Kubernetes
+   93  ls
+   94  cd 12-Kubernetes/
+   95  ls
+   96  cd guestbook-
+   97  cd guestbook-service/
+   98  ls
+   99  git status
+  100  git commit -m "Deploying into Kubernetes Engine"
+  101  git push
+  102  git add .
+  103  cd ../..
+  104  git status
+  105  ls
+  106  cd 12-Kubernetes/
+  107  ls
+  108  cd ..
+  109  git add .
+  110  git status
+  111  git commit -m "Deploying into Kubernetes Engine"
+  112  git push
+  113  cd ..
+  114  ls
+  115  cp -r guestbook-frontend/ SpringBoot-SpringCloud/12-Kubernetes/
+  116  ls
+  117  cd SpringBoot-SpringCloud/
+  118  ls
+  119  git status
+  120  git add .
+  121  git commit 
+  122  git push
+  123  git status
+  124  git commit -m "Files added"
+  125  git push
+  126  git status
+  127  history> History.txt
